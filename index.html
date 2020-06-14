@@ -34,7 +34,7 @@
       </p>
     </nav>
     <main class="container">
-       <!-- Starting page content -->
+      <!-- Starting page content. -->
       <section class="row justify-content-center" id="start">
         <div class="col-7 text-center">
           <h1 class="font-weight-bold">Coding Quiz Challenge</h1>
@@ -43,24 +43,31 @@
             limit. Keep in mind that incorrect answers will penalize your
             score/time by ten seconds!
           </p>
-          <button class="btn btn-primary btn-sm">Start Quiz</button>
+          <button class="btn btn-primary btn-sm" id="start-btn">Start Quiz</button>
         </div>
       </section>
 
       <!-- Questions -->
-      <section class="row justify-content-center" id="questions">
+      <section class="row justify-content-center d-none" id="questions">
         <div class="col-7">
-          <h2 class="font-weight-bold">Question goes here...</h2>
+          <h2 class="font-weight-bold" id="question">Question goes here...</h2>
         </div>
       </section>
 
-      <!-- Scoring Form -->
-      <section class="row justify-content-center" id="questions">
+      <!-- Scoring form. Log initaials. -->
+      <section class="row justify-content-center d-none" id="done">
         <div class="col-7">
-          <h2 class="font-weight-bold">Question goes here...</h2>
+          <h2 class="font-weight-bold">All done!</h2>
+          <p>Your final score is <span id="score">0</span>.</p>
+          <form class="form-inline">
+              <div class="form-group">
+                  <label for="initials">Enter initials: </label>
+                  <input type="text" id="initials" class="form-control-sm">
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+          </form>
         </div>
       </section>
-      
     </main>
 
     <!-- Optional JavaScript -->
