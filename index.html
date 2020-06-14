@@ -23,9 +23,45 @@
   <body>
     <!-- Navbar to check highscores and to show quiz timer on the left. -->
     <nav class="nav nav-justified">
-      <a class="nav-item nav-link active" id="highscores" href="./high-scores.html">View Highscores</a>
-      <p class="nav-item nav-link" id="time">Time: <span>--</span></p>
+      <a
+        class="nav-item nav-link text-left active"
+        id="highscores"
+        href="./high-scores.html"
+        >View Highscores</a
+      >
+      <p class="nav-item nav-link text-right" id="timer">
+        Time: <span>0</span>
+      </p>
     </nav>
+    <main class="container">
+       <!-- Starting page content -->
+      <section class="row justify-content-center" id="start">
+        <div class="col-7 text-center">
+          <h1 class="font-weight-bold">Coding Quiz Challenge</h1>
+          <p>
+            Try to answer the following code-related questions within the time
+            limit. Keep in mind that incorrect answers will penalize your
+            score/time by ten seconds!
+          </p>
+          <button class="btn btn-primary btn-sm">Start Quiz</button>
+        </div>
+      </section>
+
+      <!-- Questions -->
+      <section class="row justify-content-center" id="questions">
+        <div class="col-7">
+          <h2 class="font-weight-bold">Question goes here...</h2>
+        </div>
+      </section>
+
+      <!-- Scoring Form -->
+      <section class="row justify-content-center" id="questions">
+        <div class="col-7">
+          <h2 class="font-weight-bold">Question goes here...</h2>
+        </div>
+      </section>
+      
+    </main>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
