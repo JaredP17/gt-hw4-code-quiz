@@ -2,7 +2,7 @@
 
 Timed code quiz with multiple-choice questions. Keep in mind that incorrect answers will penalize your score/time by ten seconds! This app will run in the browser and feature dynamically updated HTML and CSS powered by my JavaScript code.
 
-Check out the deployable site here: [Password Generator](https://jaredp17.github.io/PasswordGenerator/).
+Check out the deployable site here: [Coding Quiz Challenge](https://jaredp17.github.io/gt-hw4-code-quiz/).
 
 ## Usage
 
