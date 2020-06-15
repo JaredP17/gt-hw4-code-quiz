@@ -1,47 +1,37 @@
-# 04 Web APIs: Code Quiz
+## Description
 
-As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment, which is typically a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+Timed code quiz with multiple-choice questions. Keep in mind that incorrect answers will penalize your score/time by ten seconds! This app will run in the browser and feature dynamically updated HTML and CSS powered by my JavaScript code.
 
-## User Story
+Check out the deployable site here: [Password Generator](https://jaredp17.github.io/PasswordGenerator/).
 
-```
-AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+## Usage
 
-## Acceptance Criteria
+1. Clone the repo or open deployable site.
+   - Open index.html in default browser (if cloned).
+2. Take the quiz. Log your score.
 
-```
-GIVEN I am taking a code quiz
+## Preview
 
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
+The following GIF demonstrates the application functionality:
+![Standalone](./Assets/04-web-apis-homework-demo.gif)
 
-WHEN I answer a question
-THEN I am presented with another question
+## Credits
 
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
+- This concept was designed by the Georgia Tech curriculum team. I wrote the html/css/javascript code to try to match their criteria.
+- Bootstrap styling
 
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
+## Contributing
 
-WHEN the game is over
-THEN I can save my initials and score
-```
+I am the sole contributor to this project.
 
-The following animation demonstrates the application functionality:
+## Licenses
 
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### Review
+Copyright (c) 2020 Jared Porter
 
-You are required to submit the following for review:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-* The URL of the functional, deployed application.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
