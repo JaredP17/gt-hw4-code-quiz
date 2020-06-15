@@ -7,17 +7,20 @@ var question = document.querySelector("#question");
 var choices = document.getElementById("answer-choices");
 var done = document.querySelector("#done");
 var timerInterval;
-var timeRemaining = 75; // Also sets the score
+var timeRemaining = 60; // Also sets the score
 var qIndex = 0;
+var score = 0;
 
 // FUNCTION DEFINITIONS
 
 // Countdown timer
 function setTimer() {
+  timer.textContent = timeRemaining;
   timerInterval = setInterval(function () {
     if (timeRemaining <= 0) {
       clearInterval(timerInterval);
       alert("Out of time!");
+      showScore();
     } else {
       timeRemaining--;
       timer.textContent = timeRemaining;
@@ -61,6 +64,10 @@ function renderQuestions() {
 // When the quiz is over
 function showScore() {
   clearInterval(timerInterval);
+  if (timeRemaining < 0) {
+    timeRemaining = 0;
+    timer.textContent = 0;
+  }
   questions.classList.add("d-none");
   done.classList.remove("d-none");
   document.getElementById("score").textContent = timeRemaining;
@@ -79,17 +86,25 @@ startBtn.addEventListener("click", function () {
 
 // Choose Answers
 choices.addEventListener("click", function (event) {
-  event.preventDefault();
 
   if (event.target.matches("button")) {
     console.log("clicking " + event.target.textContent);
     var choice = event.target.textContent;
+    
+    if (choice === questionsList[qIndex].answer) {
+      choiceResult("Correct!");
+    } else {
+      timeRemaining -= 10;
+      timer.textContent = timeRemaining;
+      choiceResult("Wrong!");
+    }
+    
     qIndex++;
-    choiceResult("Correct!");
-    if (qIndex < questionsList.length && timeRemaining > 0) {
+    if (qIndex < questionsList.length) {
       renderQuestions();
     } else { // No more quiz questions
       console.log("Out of questions!");
+
       showScore();
     }
   }
