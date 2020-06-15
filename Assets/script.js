@@ -65,9 +65,11 @@ function renderQuestions() {
 function showScore() {
   clearInterval(timerInterval);
   if (timeRemaining < 0) {
+    // Eliminates negative scoring
     timeRemaining = 0;
     timer.textContent = 0;
   }
+
   questions.classList.add("d-none");
   done.classList.remove("d-none");
   document.getElementById("score").textContent = timeRemaining;
@@ -86,11 +88,10 @@ startBtn.addEventListener("click", function () {
 
 // Choose Answers
 choices.addEventListener("click", function (event) {
-
   if (event.target.matches("button")) {
     console.log("clicking " + event.target.textContent);
     var choice = event.target.textContent;
-    
+
     if (choice === questionsList[qIndex].answer) {
       choiceResult("Correct!");
     } else {
@@ -98,11 +99,12 @@ choices.addEventListener("click", function (event) {
       timer.textContent = timeRemaining;
       choiceResult("Wrong!");
     }
-    
+
     qIndex++;
     if (qIndex < questionsList.length) {
       renderQuestions();
-    } else { // No more quiz questions
+    } else {
+      // No more quiz questions
       console.log("Out of questions!");
 
       showScore();
