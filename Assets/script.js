@@ -21,15 +21,18 @@ function setTimer() {
     } else {
       timeRemaining--;
       timer.textContent = timeRemaining;
-      console.log(timeRemaining);
+      // console.log(timeRemaining);
     }
   }, 1000);
 }
 
-// Displays if answer was right/wrong for a short period
-function choiceResult(result) {
+// Displays if answer was correct/wrong for a short period
+function choiceResult(correctOrWrong) {
   var result = document.querySelector("#choice-result");
   result.classList.remove("d-none");
+  // Display message
+  document.getElementById("correctness").textContent = correctOrWrong;
+
   var time = 2;
   var correctnessInterval = setInterval(function () {
     if (time > 0) {
@@ -41,6 +44,7 @@ function choiceResult(result) {
   }, 500);
 }
 
+// Render all question of the current question index in questions.js
 function renderQuestions() {
   questions.classList.remove("d-none");
   question.textContent = questionsList[qIndex].question;
